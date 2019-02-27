@@ -5,6 +5,14 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     @post = posts(:one)
   end
 
+  test "id parameter should only be digits" do
+    get "/posts/#{@post.id}"
+    assert_response :success
+    assert_raise ActionController::RoutingError do
+      get "/posts/abc123"
+    end
+  end
+
   test "should get index" do
     get posts_url
     assert_response :success
