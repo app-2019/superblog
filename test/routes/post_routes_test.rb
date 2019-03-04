@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PostsRoutesTest < ActionDispatch::IntegrationTest
   setup do
-    @post = posts(:one)
+    @post = posts(:good_post)
   end
 
   test "id parameter should only be digits" do
