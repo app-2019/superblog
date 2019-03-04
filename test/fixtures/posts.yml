@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  slug: MyString
-  content: MyText
+good_post:
+  title: A Nice Title
+  slug: a-nice-title
+  content: Some content.
 
-two:
-  title: MyString
-  slug: MyString
-  content: MyText
+missing_title:
+  title:
+  slug: missing-title
+  content: Some content.
