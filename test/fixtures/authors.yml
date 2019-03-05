@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+karl:
+  name: Karl Stolley
 
-two:
-  name: MyString
+hank:
+  name: Hank Stolley
