@@ -9,4 +9,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header#header
+      %h1 SuperBlog
+      %p.tagline The super, duper blog I write.
+
     = yield
+
+    %footer#footer
+      %small Site design by me. All rights reserved.
