@@ -6,14 +6,15 @@
         - @post.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :slug
-    = f.text_field :slug
-  .field
-    = f.label :content
-    = f.text_area :content
-  .actions
-    = f.submit 'Save'
+  %ol.inputs
+    %li
+      = f.label :title
+      = f.text_field :title
+    %li
+      = f.label :slug
+      = f.text_field :slug
+    %li
+      = f.label :content
+      = f.text_area :content
+    %li.actions
+      = f.submit 'Save'
