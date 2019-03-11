@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+@author = Author.create(name: 'Karl Stolley')
+@post = Post.create(title: 'Seeded Post', slug: 'seeded-post', content: 'Seeded post content.', author: @author)
