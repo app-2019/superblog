@@ -8,6 +8,20 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 
+// Site-wide variables
+$primary_color: #FF0000;
+$base_font_size: 20px;
+
+// Site-wide functions
+@function px-to-em($target,$context:$base_font_size) {
+  @return ($target / $context) * 1em;
+}
+
+// TODO: Create own exponentiation function for interval
+// @function typographic_scale($ratio,$interval,$base:$base_font_size) {
+//  @return $base * ($ratio ^ $interval) * 1px;
+// }
+
 /* Base Styles (HTML Selectors) */
 
 /* Layout Styles (Usually Landmark ID Selectors) */
