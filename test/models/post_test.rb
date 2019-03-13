@@ -22,4 +22,11 @@ class PostTest < ActiveSupport::TestCase
     @post.save
     assert_equal @post.author_name, authors(:hank).name
   end
+
+  test "access tags through post" do
+    assert_equal posts(:good_post).tags.count, 2
+    assert_equal posts(:good_post).tags.first.name, tags(:general).name
+    assert posts(:good_post).tags.include? tags(:fyi)
+  end
+
 end
