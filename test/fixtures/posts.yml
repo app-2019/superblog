@@ -5,9 +5,11 @@ good_post:
   slug: a-nice-title
   content: Some content.
   author: karl
+  tags: general, fyi
 
 missing_title:
   title:
   slug: missing-title
   content: Some content.
   author: hank
+  tags: general
