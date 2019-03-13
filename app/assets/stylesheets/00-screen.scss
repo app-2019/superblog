@@ -23,6 +23,16 @@ $base_font_size: 20px;
 // }
 
 /* Base Styles (HTML Selectors) */
+html {
+  font-size: px-to-em($base_font_size,16px); /* 20 / 16 = 1.25 */
+  color: $primary_color;
+  line-height: px-to-em(24px);
+}
+h1 {
+  font-size: px-to-em(45px);
+  line-height: px-to-em(48px,45px);
+}
+
 
 /* Layout Styles (Usually Landmark ID Selectors) */
 
