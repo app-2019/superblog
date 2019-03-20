@@ -5,3 +5,6 @@
 # Use XHTML style (self-closing tags, etc.)
 # Note this requires a `!!!5` DOCTYPE to use HTML5 semantics
 Haml::Template.options[:format] = :xhtml
+
+# Use double quotes on attribute values, etc.
+Haml::Template.options[:attr_wrapper] = '"'
