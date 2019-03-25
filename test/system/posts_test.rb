@@ -2,12 +2,12 @@ require "application_system_test_case"
 
 class PostsTest < ApplicationSystemTestCase
   setup do
-    @post = posts(:one)
+    @post = posts(:good_post)
   end
 
   test "visiting the index" do
     visit posts_url
-    assert_selector "h1", text: "Posts"
+    assert_selector "header h2", text: "Latest Posts"
   end
 
   test "creating a Post" do
@@ -17,7 +17,7 @@ class PostsTest < ApplicationSystemTestCase
     fill_in "Content", with: @post.content
     fill_in "Slug", with: @post.slug
     fill_in "Title", with: @post.title
-    click_on "Create Post"
+    click_on "Save"
 
     assert_text "Post was successfully created"
     click_on "Back"
@@ -30,7 +30,7 @@ class PostsTest < ApplicationSystemTestCase
     fill_in "Content", with: @post.content
     fill_in "Slug", with: @post.slug
     fill_in "Title", with: @post.title
-    click_on "Update Post"
+    click_on "Save"
 
     assert_text "Post was successfully updated"
     click_on "Back"
