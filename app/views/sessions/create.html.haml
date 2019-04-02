@@ -1,2 +1,17 @@
 %h1 Sessions#create
-%p Find me in app/views/sessions/create.html.haml
+
+%pre= @provider_response.to_json
+
+%ul
+  %li
+    %b Username:
+    = @provider_response['info']['name']
+  %li
+    %b Nickname:
+    = @provider_response['info']['nickname']
+  %li
+    %b Email:
+    = @provider_response['info']['email']
+  %li
+    %b UID:
+    = @provider_response['uid']
