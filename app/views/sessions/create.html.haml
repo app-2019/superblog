@@ -1,17 +1,15 @@
 %h1 Sessions#create
 
-%pre= @provider_response.to_json
-
 %ul
   %li
     %b Username:
-    = @provider_response['info']['name']
+    = @author.login
   %li
     %b Nickname:
-    = @provider_response['info']['nickname']
+    = @author.name
   %li
     %b Email:
-    = @provider_response['info']['email']
+    = @author.email
   %li
     %b UID:
-    = @provider_response['uid']
+    = @author.uid
