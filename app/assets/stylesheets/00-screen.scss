@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 // Site-wide variables
-$primary_color: #FF0000;
+$primary_color: #000;
 $base_font_size: 20px;
 
 // Site-wide functions
@@ -31,6 +31,13 @@ html {
 h1 {
   font-size: px-to-em(45px);
   line-height: px-to-em(48px,45px);
+}
+
+pre {
+  font-family: monospace;
+  font-size: 14px;
+  background: #EEE;
+  padding: 1em;
 }
 
 
