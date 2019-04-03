@@ -1,3 +1,13 @@
 %h1 Let's Create a New Author (Eventually)
 
-%pre= @provider_hash
+%h2 Author Info
+%ul
+  %li
+    %b Name
+    = @author.name
+  %li
+    %b Email
+    = @author.email
+  %li
+    %b Username
+    = @author.nickname
