@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Tag.destroy_all
+Author.destroy_all
+Post.destroy_all
+
 @tags = Tag.create([{name: 'general'},{name: 'fyi'}])
 @author = Author.create(name: 'Karl Stolley')
 @post = Post.create(title: 'Seeded Post', slug: 'seeded-post', content: 'Seeded post content.', author: @author, tags: @tags)
