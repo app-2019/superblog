@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       author.nickname = omni['info']['nickname']
       author.email = omni['info']['email']
     end
+    self.current_user = @author
   end
   def login
   end
