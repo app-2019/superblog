@@ -13,4 +13,14 @@ class ApplicationController < ActionController::Base
     session[:name] = author.name
   end
 
+  def user_signed_in?
+    !!current_user
+  end
+
+  def authenticate_user
+    unless user_signed_in?
+      redirect_to login_url, notice: "Please log in first"
+    end
+  end
+
 end
