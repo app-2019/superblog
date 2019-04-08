@@ -9,4 +9,8 @@ class SessionsController < ApplicationController
       author.email = omni['info']['email']
     end
   end
+  def login
+  end
+  def logout
+  end
 end
