@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       author.email = omni['info']['email']
     end
     self.current_user = @author
+    redirect_to posts_url
   end
   def login
   end
