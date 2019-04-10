@@ -26,7 +26,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.author = current_user
-    @post.photo.attach(post_params[:photo])
 
     respond_to do |format|
       if @post.save
