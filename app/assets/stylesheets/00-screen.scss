@@ -40,6 +40,12 @@ pre {
   padding: 1em;
 }
 
+/* Responsive Images */
+
+img {
+  display: block;
+  max-width: 100%;
+}
 
 /* Layout Styles (Usually Landmark ID Selectors) */
 
