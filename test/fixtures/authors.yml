@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 karl:
-  name: Karl Stolley
+  uid: 12345
+  name: karlstolley
+  nickname: Karl Stolley
+  email: karl@example.com
 
 hank:
-  name: Hank Stolley
+  uid: 67890
+  name: hankstolley
+  nickname: Hank Stolley
+  email: hank@example.com
