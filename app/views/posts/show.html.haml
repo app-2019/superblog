@@ -4,8 +4,9 @@
   %h3= @post.title
   %p.byline= @post.author.name
   = @post.content
-  %figure
-    = image_tag @post.photo
+  - if @post.photo.attached?
+    %figure
+      = image_tag @post.photo
   %ul.controls
     %li= link_to 'Edit', edit_post_path(@post)
     %li= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }
