@@ -19,4 +19,7 @@ class ActiveSupport::TestCase
   end
 
   # Add more helper methods to be used by all tests here...
+  def login_with(provider)
+    post "/auth/#{provider}/callback", params: OmniAuth.config.mock_auth[provider.to_sym]
+  end
 end
