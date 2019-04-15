@@ -19,9 +19,9 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create post" do
     assert_difference('Post.count') do
-      post posts_url, params: { post: { content: @post.content, slug: @post.slug, title: @post.title, author_name: @post.author.name, tag_names: @post.tag_names } }
+      post posts_url, params: { post: { content: @post.content, slug: @post.slug, title: @post.title, author_name: @post.author.name, tag_names: @post.tag_names, photo: fixture_file_upload('files/hank-sq.jpg') } }
     end
-
+    assert Post.last.photo.attached?
     assert_redirected_to post_url(Post.last)
   end
 
