@@ -22,4 +22,8 @@ class ActiveSupport::TestCase
     })
   end
 
+  def sign_in_with(provider)
+    post '/auth/github/callback', params: OmniAuth.config.mock_auth[provider]
+  end
+
 end
