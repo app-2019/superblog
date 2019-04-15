@@ -4,7 +4,7 @@ good_post:
   title: A Nice Title
   slug: a-nice-title
   content: Some content.
-  author: karl
+  author: hank
   tags: general, fyi
 
 missing_title:

@@ -18,9 +18,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create post" do
     assert_difference('Post.count') do
-      post posts_url, params: { post: { content: @post.content, slug: @post.slug, title: @post.title, author_name: @post.author.name, tag_names: @post.tag_names } }
+      post posts_url, params: { post: { content: @post.content, slug: @post.slug, title: @post.title, tag_names: @post.tag_names } }
     end
-
+    # Cheaply test whether the Author portion of the record is saved via the current_user hash
+    # TODO: More directly test whether that's the case
+    assert_equal(Post.last.author,authors(:karl))
     assert_redirected_to post_url(Post.last)
   end
 
@@ -35,7 +37,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update post" do
-    patch post_url(@post), params: { post: { content: @post.content, slug: @post.slug, title: @post.title, author_name: @post.author.name, tag_names: @post.tag_names } }
+    patch post_url(@post), params: { post: { content: @post.content, slug: @post.slug, title: @post.title, tag_names: @post.tag_names } }
     assert_redirected_to post_url(@post)
   end
 
