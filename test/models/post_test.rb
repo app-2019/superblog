@@ -29,4 +29,13 @@ class PostTest < ActiveSupport::TestCase
     assert posts(:good_post).tags.include? tags(:fyi)
   end
 
+  test "accepts a photo file attachment" do
+    @post = posts(:good_post)
+    file = Rails.root.join('test','fixtures','files','hank-sq.jpg')
+    @post.photo.attach(io: File.open(file),filename: 'hank-sq.jpg')
+    assert @post.save
+    assert @post.valid?
+    assert @post.photo.attached?
+  end
+
 end
