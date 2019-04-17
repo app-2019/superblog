@@ -18,11 +18,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create post" do
     assert_difference('Post.count') do
-      post posts_url, params: { post: { content: @post.content, slug: @post.slug, title: @post.title, tag_names: @post.tag_names } }
+      post posts_url, params: { post: { content: @post.content, slug: @post.slug, title: @post.title, tag_names: @post.tag_names, photo: fixture_file_upload('files/hank-sq.jpg') } }
     end
     # Cheaply test whether the Author portion of the record is saved via the current_user hash
     # TODO: More directly test whether that's the case
     assert_equal(Post.last.author,authors(:karl))
+    assert Post.last.photo.attached?
     assert_redirected_to post_url(Post.last)
   end
 
