@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       author.email = omni['info']['email']
     end
     self.current_user = @author
-    redirect_to request.env['omniauth.origin'] || posts_url
+    origin = request.env['omniauth.origin']
+    redirect_to origin.include?('log') ? posts_url : origin
   end
   def login
   end
