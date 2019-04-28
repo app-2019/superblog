@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       author.email = omni['info']['email']
     end
     self.current_user = @author
-    origin = request.env['omniauth.origin']
+    # Hacky, but enables tests to pass; assign `/posts` to origin when `omniauth.origin` is missing
+    origin = request.env['omniauth.origin'] || '/posts'
     redirect_to origin.include?('log') ? posts_url : origin
   end
   def login
